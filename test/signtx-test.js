@@ -276,7 +276,7 @@ describe('Signing Transactions', function () {
     /*
      * note that this test uses the witwallet
      */
-    it.skip(`should sign a tx with segwit inputs (${vendor})`, async () => {
+    it(`should sign a tx with segwit inputs (${vendor})`, async () => {
       const mtx = new MTX();
 
       mtx.addOutput({
@@ -310,7 +310,7 @@ describe('Signing Transactions', function () {
      * from different paths work
      * note that this test uses the wallet
      */
-    it.skip(`should sign tx with many inputs (${vendor})`, async () => {
+    it(`should sign tx with many inputs (${vendor})`, async () => {
       for (let i = 0; i < 5; i++) {
         miner.addresses = [wallet.getReceive()];
         const block = await miner.mineBlock();
